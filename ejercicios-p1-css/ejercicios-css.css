@@ -1,0 +1,14 @@
+#parrafoazul{
+    color: blue;
+}
+#link {
+    color:red;
+    text-decoration: none;
+}
+#btn{
+    width: 25%;
+    
+}
+#btn:hover {
+    color: red;
+}
