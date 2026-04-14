@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+
+* {
+    background-color: #C0C0C0;
+    padding: 0px;
+}
+
+
+
+:root {
+    --colorPrinicpal: #0A192F; 
+    --colorPrimario: #050505;
+    --colorSecundario: #1B3B5F;
+    --colorTericiario : #8E9AAF;
+    --fuente-header: 'Bebas Neue', sans-serif;
+    --fuente-body: 'Montserrat', sans-serif;
+    --fuente-secundaria:'Playfair Display', serif;
+    --fuente-primaria: 'Inter', sans-serif;
+    --color-perfumes : #C0C0C0;
+}
+
+#navbarDiv{
+    display:flex;
+    align-content: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+#linksHeaderDiv{
+    display: flex;
+    align-items: baseline ;
+    justify-content: space-between;
+    
+}
+.linksHeader{
+    text-decoration: none;
+    font-family: var(--fuente-body);
+    color: var(--colorSecundario);
+    font-size: 15px;
+}
+#marcaNombre{
+    font-family: var(--fuente-header);
+    color: var(--colorSecundario);  
+    font-size:x-large;
+
+}
+#hero{
+    height: 600px;
+}
+#infoPerfume{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    margin-top: 120px;
+
+}
+#tituloPerfume{
+    font-family: var(--fuente-secundaria);
+    font-size: 50px;
+}
+#descripcionPerfume{
+    font-family: var(--fuente-primaria);
+    font-size: 20px;
+    margin-top: -20px;
+}
+
+#perfumes{
+    background-color: var(--color-perfumes);
+    width: 100%;
+    height: 750px;
+}
+table{
+    width: 100%;
+    height: 750px;;
+    
+}
+table, td, tr{
+    border: 5px solid black;
+    border-collapse: collapse;
+    border-spacing: 0   ;
+}
+td{
+    width: 50%;
+    height: 500px;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+td:hover{
+    opacity: 0.4;
+}
+
+.imagenPerfume{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.nombrePerfume,  .descripcionPerfume{
+    margin-block-end: 0px;
+    margin-block-start: 1px;
+    z-index: 900;
+    background-color: transparent;
+}
+
+.infoPerfumes{
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+}
+.nombrePerfume{
+    font-family: var(--fuente-header);
+    font-size: 45px;  
+    color: var(--colorSecundario)
+    
+}
+.descripcionPerfume{
+    font-family: var(--fuente-secundaria);
+    font-style:italic;
+    color: var(--colorPrinicpal)
+}
+.imagenPerfume{
+    width: 100%;
+    
+}
