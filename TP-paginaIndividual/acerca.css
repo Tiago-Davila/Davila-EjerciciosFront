@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --colorPrimario: #050505;
+    --colorSecundario: #1B3B5F;
+    --colorTerciario: #8E9AAF;
+    --color-perfumes: #C0C0C0;
+    --fuente-header: 'Bebas Neue', sans-serif;
+    --fuente-body: 'Montserrat', sans-serif;
+    --fuente-secundaria: 'Playfair Display', serif;
+    --fuente-primaria: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--colorPrimario);
+    min-height: 100vh;
+}
+
+#navbarAcerca {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: var(--colorPrimario);
+    border-bottom: 1px solid rgba(27, 59, 95, 0.2);
+}
+
+#navbarDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 30px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+#marcaNombre {
+    font-family: var(--fuente-header);
+    color: var(--colorSecundario);
+    font-size: x-large;
+    letter-spacing: 2px;
+}
+
+#linksHeaderDiv {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.linksHeader {
+    text-decoration: none;
+    font-family: var(--fuente-body);
+    color: var(--color-perfumes);
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.linksHeader:hover {
+    color: var(--colorSecundario);
+}
+
+#paginaAcerca {
+    background-color: var(--colorPrimario);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 60px;
+}
+
+#tituloAcerca {
+    font-family: var(--fuente-header);
+    font-size: 48px;
+    color: var(--colorSecundario);
+    margin-bottom: 12px;
+    letter-spacing: 6px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#subtituloAcerca {
+    font-family: var(--fuente-secundaria);
+    font-size: 16px;
+    color: var(--color-perfumes);
+    font-style: italic;
+    margin-bottom: 40px;
+    text-align: center;
+    opacity: 0.85;
+}
+
+.parrafoAcerca {
+    font-family: var(--fuente-primaria);
+    font-size: 14px;
+    color: var(--colorTerciario);
+    width: 100%;
+    max-width: 680px;
+    text-align: center;
+    line-height: 2;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+@media (min-width: 768px) {
+    #navbarDiv {
+        flex-wrap: nowrap;
+        padding: 20px 40px;
+    }
+
+    .linksHeader {
+        font-size: 15px;
+    }
+
+    #tituloAcerca {
+        font-size: 72px;
+        margin-bottom: 16px;
+        letter-spacing: 10px;
+    }
+
+    #subtituloAcerca {
+        font-size: 22px;
+        margin-bottom: 50px;
+    }
+
+    .parrafoAcerca {
+        font-size: 16px;
+        line-height: 2.1;
+        margin-bottom: 24px;
+    }
+
+    #paginaAcerca {
+        padding: 140px 60px 80px;
+    }
+}

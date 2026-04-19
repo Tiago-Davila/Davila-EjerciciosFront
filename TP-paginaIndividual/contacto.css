@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --colorPrimario: #050505;
+    --colorSecundario: #1B3B5F;
+    --colorTerciario: #8E9AAF;
+    --color-perfumes: #C0C0C0;
+    --fuente-header: 'Bebas Neue', sans-serif;
+    --fuente-body: 'Montserrat', sans-serif;
+    --fuente-secundaria: 'Playfair Display', serif;
+    --fuente-primaria: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--colorPrimario);
+    min-height: 100vh;
+}
+
+#navbarContacto {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: var(--colorPrimario);
+    border-bottom: 1px solid rgba(27, 59, 95, 0.2);
+}
+
+#navbarDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 30px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+#marcaNombre {
+    font-family: var(--fuente-header);
+    color: var(--colorSecundario);
+    font-size: x-large;
+    letter-spacing: 2px;
+}
+
+#linksHeaderDiv {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.linksHeader {
+    text-decoration: none;
+    font-family: var(--fuente-body);
+    color: var(--color-perfumes);
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.linksHeader:hover {
+    color: var(--colorSecundario);
+}
+
+#paginaContacto {
+    background-color: var(--colorPrimario);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 60px;
+}
+
+#tituloContacto {
+    font-family: var(--fuente-header);
+    font-size: 48px;
+    color: var(--colorSecundario);
+    margin-bottom: 8px;
+    letter-spacing: 6px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#subtituloContacto {
+    font-family: var(--fuente-secundaria);
+    font-size: 16px;
+    color: var(--color-perfumes);
+    font-style: italic;
+    margin-bottom: 40px;
+    text-align: center;
+    opacity: 0.85;
+}
+
+#formContacto {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    max-width: 480px;
+    background: rgba(27, 59, 95, 0.06);
+    border: 1px solid rgba(27, 59, 95, 0.15);
+    border-radius: 16px;
+    padding: 36px 28px;
+}
+
+#formContacto input,
+#formContacto textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(142, 154, 175, 0.3);
+    padding: 14px 4px;
+    color: var(--color-perfumes);
+    font-family: var(--fuente-primaria);
+    font-size: 14px;
+    outline: none;
+    resize: none;
+    width: 100%;
+    transition: border-color 0.3s ease;
+    margin-bottom: 8px;
+}
+
+#formContacto input:focus,
+#formContacto textarea:focus {
+    border-bottom-color: var(--colorSecundario);
+}
+
+#formContacto input::placeholder,
+#formContacto textarea::placeholder {
+    color: var(--colorTerciario);
+    font-family: var(--fuente-primaria);
+    font-size: 13px;
+}
+
+#formContacto textarea {
+    margin-top: 4px;
+    line-height: 1.6;
+}
+
+#formContacto button {
+    background-color: var(--colorSecundario);
+    color: var(--color-perfumes);
+    border: none;
+    padding: 14px;
+    font-family: var(--fuente-body);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+}
+
+#formContacto button:hover {
+    opacity: 0.85;
+}
+
+@media (min-width: 768px) {
+    #navbarDiv {
+        flex-wrap: nowrap;
+        padding: 20px 40px;
+    }
+
+    .linksHeader {
+        font-size: 15px;
+    }
+
+    #tituloContacto {
+        font-size: 72px;
+        margin-bottom: 10px;
+        letter-spacing: 10px;
+    }
+
+    #subtituloContacto {
+        font-size: 20px;
+        margin-bottom: 50px;
+    }
+
+    #paginaContacto {
+        padding: 140px 60px 80px;
+    }
+
+    #formContacto {
+        padding: 44px 40px;
+        max-width: 520px;
+    }
+
+    #formContacto input,
+    #formContacto textarea {
+        font-size: 15px;
+        padding: 16px 4px;
+    }
+}

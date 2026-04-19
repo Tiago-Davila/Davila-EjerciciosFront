@@ -1,29 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yves Saint Laurent</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
-        <section id="navbar">
-            <div id="navbarDiv">
-                <h1 id="marcaNombre">Yves Saint Laurent</h1>
-                <div id="linksHeaderDiv">
-                    <ul><a class="linksHeader" href="">Home</a></ul>
-                    <ul><a class="linksHeader" href="">Acerca de Nosotros</a></ul>
-                    <ul><a class="linksHeader" href="">ddadasda</a></ul>
-                </div>
-            </div>
-        </section>
         <section id="hero">
-            <video id="videoHero" src=""></video>
+            <video id="videoHero" autoplay muted loop playsinline src="imagenes-videos/video-EDP.mp4"></video>
+            <div id="tapaMarcaAgua"></div>
+            <section id="navbar">
+                <div id="navbarDiv">
+                    <h1 id="marcaNombre">Yves Saint Laurent</h1>
+                    <div id="linksHeaderDiv">
+                        <a class="linksHeader" href="#">Home</a>
+                        <a class="linksHeader" href="Acerca.html">Acerca de Nosotros</a>
+                        <a class="linksHeader" href="Contacto.html">Contacto</a>
+                    </div>
+                </div>
+            </section>
             <div id="infoPerfume">
                 <h2 id="tituloPerfume">Y EAU DE PARFUM</h2>
-                <p id="descripcionPerfume">Para el hombre que se atreve a seguir sus pasiones y forjar 
-                    su propio camino. Una fragancia intensa, fresca y profundamente masculina que 
+                <p id="descripcionPerfume">Para el hombre que se atreve a seguir sus pasiones y forjar
+                    su propio camino. Una fragancia intensa, fresca y profundamente masculina que
                     captura la esencia del éxito.</p>
             </div>
         </section>
@@ -32,41 +35,63 @@
         <section id="perfumes">
             <table>
                 <tr>
-                    <td>
-                        <img src="imagenes/1erPerfume.webp" class="imagenPerfume" alt="MYSLF Eau de Parfum (Hombre)">
+                    <td id="td-myslf">
                         <div class="infoPerfumes">
                             <h2 class="nombrePerfume">MYSLF Eau de Parfum (Hombre)</h2>
-                            <p class="descripcionPerfume">"Sé tú mismo, sin disculpas". Un aroma limpio, radiante y contemporáneo.</p>                              
-                        </div>    
+                            <p class="descripcionPerfume">"Sé tú mismo, sin disculpas". Un aroma limpio, radiante y contemporáneo.</p>
+                        </div>
                     </td>
-                    <td>
-                        <img src="imagenes/1erPerfume.webp" class="imagenPerfume" alt="MYSLF Eau de Parfum (Hombre)">
+                    <td id="td-edp">
                         <div class="infoPerfumes">
-                            <h2 class="nombrePerfume">MYSLF Eau de Parfum (Hombre)</h2>
-                            <p class="descripcionPerfume">"Sé tú mismo, sin disculpas". Un aroma limpio, radiante y contemporáneo.</p>                              
-                        </div>    
+                            <h2 class="nombrePerfume">Y Eau de Parfum (versátil y dulce)</h2>
+                            <p class="descripcionPerfume">"Todo está por venir". Un aroma fresco, intenso y lleno de ambición.</p>
+                        </div>
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        <img src="imagenes/1erPerfume.webp" class="imagenPerfume" alt="MYSLF Eau de Parfum (Hombre)">
+                    <td id="td-lanuit">
                         <div class="infoPerfumes">
-                            <h2 class="nombrePerfume">MYSLF Eau de Parfum (Hombre)</h2>
-                            <p class="descripcionPerfume">"Sé tú mismo, sin disculpas". Un aroma limpio, radiante y contemporáneo.</p>                              
-                        </div>    
+                            <h2 class="nombrePerfume">La Nuit de l'Homme</h2>
+                            <p class="descripcionPerfume">"La noche te pertenece". Un aroma oscuro, magnético y lleno de deseo.</p>
+                        </div>
                     </td>
-                    <td>
-                        <img src="imagenes/1erPerfume.webp" class="imagenPerfume" alt="MYSLF Eau de Parfum (Hombre)">
+                    <td id="td-lhomme">
                         <div class="infoPerfumes">
-                            <h2 class="nombrePerfume">MYSLF Eau de Parfum (Hombre)</h2>
-                            <p class="descripcionPerfume">"Sé tú mismo, sin disculpas". Un aroma limpio, radiante y contemporáneo.</p>                              
-                        </div>    
+                            <h2 class="nombrePerfume">L'Homme</h2>
+                            <p class="descripcionPerfume">"Confianza de sobra, todos los días". Un aroma fresco, elegante y sin esfuerzo.</p>
+                        </div>
                     </td>
                 </tr>
             </table>
         </section>
-        <section id="suscripcionNoticias"></section>
+
+        <section id="suscripcionNoticias">
+            <div id="seccionNoticias">
+                <div id="infoSuscripcion">
+                    <h1 id="tituloSuscripcion">Suscríbete a las noticias</h1>
+                    <p id="descripcionSuscripcion">Recibe las últimas novedades y ofertas exclusivas de Yves Saint Laurent.</p>
+                </div>
+                <div id="divForm">
+                    <form action="">
+                        <input type="text" placeholder="Ingrese Nombre" required>
+                        <input type="email" placeholder="Ingrese Email" required>
+                        <button type="submit">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer></footer>
+    <footer id="footer">
+        <div id="footerContenido">
+            <span id="footerNombre">Yves Saint Laurent</span>
+            <div id="footerLinks">
+                <a class="footerLink" href="#">Home</a>
+                <a class="footerLink" href="Acerca.html">Acerca de Nosotros</a>
+                <a class="footerLink" href="Contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
+
 </html>

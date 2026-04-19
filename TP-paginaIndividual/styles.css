@@ -2,103 +2,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
 
 * {
-    background-color: #C0C0C0;
     padding: 0px;
+    margin: 0;
 }
 
 
 
 :root {
-    --colorPrinicpal: #0A192F; 
+    --colorPrinicpal: #0A192F;
     --colorPrimario: #050505;
     --colorSecundario: #1B3B5F;
-    --colorTericiario : #8E9AAF;
+    --colorTericiario: #8E9AAF;
     --fuente-header: 'Bebas Neue', sans-serif;
     --fuente-body: 'Montserrat', sans-serif;
-    --fuente-secundaria:'Playfair Display', serif;
+    --fuente-secundaria: 'Playfair Display', serif;
     --fuente-primaria: 'Inter', sans-serif;
-    --color-perfumes : #C0C0C0;
+    --color-perfumes: #C0C0C0;
+
+    --img-myslf: url('imagenes-videos/1erPerfume.webp');
+    --img-edp: url('imagenes-videos/EDP.jpg');
+    --img-lanuit: url('imagenes-videos/la-nuit.webp');
+    --img-lhomme: url('imagenes-videos/l-homme.webp');
+    --video-hero: url('imagenes-videos/video-EDP.mp4');
 }
 
-#navbarDiv{
-    display:flex;
+#navbarDiv {
+    display: flex;
     align-content: center;
     justify-content: space-between;
     padding-left: 30px;
     padding-right: 30px;
+    padding-top: 20px;
+    background-color: transparent;
 
 }
-#linksHeaderDiv{
-    display: flex;
-    align-items: baseline ;
-    justify-content: space-between;
-    
+
+#navbar {
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
 }
-.linksHeader{
+
+#linksHeaderDiv {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: transparent;
+
+}
+
+.linksHeader {
     text-decoration: none;
     font-family: var(--fuente-body);
-    color: var(--colorSecundario);
+    color: var(--color-perfumes);
     font-size: 15px;
+    background-color: transparent;
 }
-#marcaNombre{
+
+#marcaNombre {
     font-family: var(--fuente-header);
-    color: var(--colorSecundario);  
-    font-size:x-large;
+    color: var(--colorSecundario);
+    font-size: x-large;
+    background-color: transparent;
 
 }
-#hero{
-    height: 600px;
-}
-#infoPerfume{
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    width: 500px;
-    margin-top: 120px;
 
-}
-#tituloPerfume{
-    font-family: var(--fuente-secundaria);
-    font-size: 50px;
-}
-#descripcionPerfume{
-    font-family: var(--fuente-primaria);
-    font-size: 20px;
-    margin-top: -20px;
-}
-
-#perfumes{
-    background-color: var(--color-perfumes);
-    width: 100%;
-    height: 750px;
-}
-table{
-    width: 100%;
-    height: 750px;;
-    
-}
-table, td, tr{
-    border: 5px solid black;
-    border-collapse: collapse;
-    border-spacing: 0   ;
-}
-td{
-    width: 50%;
-    height: 500px;
-    padding: 20px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: stretch;
-    flex-direction: column;
+#hero {
+    height: 100vh;
     position: relative;
     overflow: hidden;
 }
-td:hover{
-    opacity: 0.4;
-}
 
-.imagenPerfume{
+#videoHero {
     position: absolute;
     top: 0;
     left: 0;
@@ -106,32 +82,410 @@ td:hover{
     height: 100%;
     object-fit: cover;
     z-index: 0;
+    background-color: transparent;
 }
 
-.nombrePerfume,  .descripcionPerfume{
+
+
+
+#infoPerfume {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    padding-top: 320px;
+    padding-left: 30px;
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+
+}
+
+#tituloPerfume {
+    font-family: var(--fuente-secundaria);
+    font-size: 50px;
+    color: white;
+    background-color: transparent;
+}
+
+#descripcionPerfume {
+    font-family: var(--fuente-primaria);
+    font-size: 18px;
+    color: #ddd;
+    background-color: transparent;
+}
+
+#perfumes {
+    background-color: var(--color-perfumes);
+    width: 100%;
+    height: 150vh;
+
+}
+
+table {
+    width: 100%;
+    height: 150vh;
+    ;
+
+}
+
+table,
+td,
+tr {
+    border: 2.5px solid black;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td {
+    width: 50%;
+    height: 75vh;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#td-myslf {
+    background-image: var(--img-myslf);
+}
+
+#td-edp {
+    background-image: var(--img-edp);
+}
+
+#td-lanuit {
+    background-image: var(--img-lanuit);
+}
+
+#td-lhomme {
+    background-image: var(--img-lhomme);
+}
+
+td:hover {
+    opacity: 0.4;
+}
+
+.imagenPerfume {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.nombrePerfume,
+.descripcionPerfume {
     margin-block-end: 0px;
     margin-block-start: 1px;
     z-index: 900;
     background-color: transparent;
 }
 
-.infoPerfumes{
-    position: relative;
+.infoPerfumes {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     z-index: 1;
     background-color: transparent;
+    padding: 16px;
+    box-sizing: border-box;
 }
-.nombrePerfume{
+
+.nombrePerfume {
     font-family: var(--fuente-header);
-    font-size: 45px;  
+    font-size: 45px;
     color: var(--colorSecundario)
-    
 }
-.descripcionPerfume{
+
+.descripcionPerfume {
     font-family: var(--fuente-secundaria);
-    font-style:italic;
+    font-style: italic;
     color: var(--colorPrinicpal)
 }
-.imagenPerfume{
+
+.imagenPerfume {
     width: 100%;
-    
+
+}
+
+
+#suscripcionNoticias {
+    background-color: var(--colorPrimario);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+#infoSuscripcion {
+    background-color: transparent;
+    text-align: center;
+}
+
+#seccionNoticias {
+    background-color: var(--color-perfumes);
+    padding: 40px;
+    border-radius: 25px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+
+
+
+#divForm input {
+    background-color: transparent;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid var(--colorTericiario);
+    color: var(--colorSecundario);
+    font-family: var(--fuente-body);
+    font-size: 14px;
+    outline: none;
+}
+
+#divForm input::placeholder {
+    color: var(--colorTericiario);
+    font-family: var(--fuente-body);
+}
+
+#divForm button {
+    background-color: var(--colorSecundario);
+    color: var(--color-perfumes);
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    font-family: var(--fuente-body);
+    font-size: 14px;
+}
+
+#divForm {
+    padding-top: 50px;
+}
+
+
+
+#tituloSuscripcion {
+    font-family: var(--fuente-header);
+    font-size: 45px;
+    color: var(--colorSecundario);
+    background-color: transparent;
+}
+
+#descripcionSuscripcion {
+    font-family: var(--fuente-primaria);
+    font-size: 15px;
+    color: var(--colorTericiario);
+    background-color: transparent;
+}
+
+footer {
+    background-color: var(--colorPrimario);
+    padding: 30px;
+}
+
+#footerContenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    background-color: transparent;
+}
+
+#footerNombre {
+    font-family: var(--fuente-header);
+    font-size: 22px;
+    color: var(--colorSecundario);
+    letter-spacing: 2px;
+    background-color: transparent;
+}
+
+#footerLinks {
+    display: flex;
+    gap: 30px;
+    background-color: transparent;
+}
+
+.footerLink {
+    font-family: var(--fuente-body);
+    font-size: 13px;
+    color: var(--colorTericiario);
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.footerLink:hover {
+    color: var(--colorSecundario);
+    background-color: transparent;
+}
+
+
+
+
+#navbarDiv {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 14px;
+}
+
+#marcaNombre {
+    font-size: large;
+}
+
+.linksHeader {
+    font-size: 12px;
+}
+
+
+#infoPerfume {
+    width: 90%;
+    padding-top: 160px;
+    padding-left: 16px;
+}
+
+#tituloPerfume {
+    font-size: 32px;
+}
+
+#descripcionPerfume {
+    font-size: 13px;
+}
+
+
+#perfumes,
+table {
+    height: auto;
+}
+
+td {
+
+    width: 100%;
+    height: 60vh;
+}
+
+.nombrePerfume {
+    font-size: 28px;
+}
+
+
+#suscripcionNoticias {
+    height: auto;
+    padding: 60px 16px;
+}
+
+#seccionNoticias {
+    width: 95%;
+    padding: 24px 20px;
+    box-sizing: border-box;
+}
+
+#tituloSuscripcion {
+    font-size: 30px;
+}
+
+
+#footerLinks {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+
+@media (min-width: 800px) {
+
+
+    #navbarDiv {
+        flex-wrap: nowrap;
+        padding-top: 20px;
+    }
+
+    #marcaNombre {
+        font-size: x-large;
+    }
+
+    .linksHeader {
+        font-size: 15px;
+    }
+
+
+    #infoPerfume {
+        width: 500px;
+        padding-top: 320px;
+        padding-left: 30px;
+    }
+
+    #tituloPerfume {
+        font-size: 50px;
+    }
+
+    #descripcionPerfume {
+        font-size: 18px;
+    }
+
+
+    #perfumes {
+        height: 150vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    table {
+        display: table;
+        height: 150vh;
+
+    }
+
+    tr {
+        display: table-row;
+    }
+
+    td {
+        display: table-cell;
+        width: 50%;
+        height: 75vh;
+    }
+
+    .nombrePerfume {
+        font-size: 45px;
+    }
+
+
+    #suscripcionNoticias {
+        height: 100vh;
+        padding: 3px 16px 0px 3px;
+    }
+
+    #seccionNoticias {
+        width: auto;
+        padding: 40px;
+    }
+
+    #tituloSuscripcion {
+        font-size: 45px;
+    }
+
+
+    #footerLinks {
+        flex-wrap: nowrap;
+        gap: 30px;
+    }
 }
