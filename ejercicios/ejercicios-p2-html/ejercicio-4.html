@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="nombre" placeholder="Nombre" maxlength="30" required>
+        <input type="text" name="apellido" placeholder="Apellido" maxlength="30" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <select name="asunto" required>
+            <option value="" disabled selected>Asunto a elegir</option>
+            <option value="presupuesto">Pedir presupuesto</option>
+            <option value="cita">Solicitar cita previa</option>
+            <option value="otros">Otros</option>
+        </select>
+        
+            <h1>¿Cómo nos ha escogido?</h1>
+            <label><input type="checkbox" name="escogido" value="amigo"> Un amigo</label>
+            <label><input type="checkbox" name="escogido" value="googleando"> Googleando</label>
+            <label><input type="checkbox" name="escogido" value="redes"> Redes sociales</label>
+            <label><input type="checkbox" name="escogido" value="otros"> Otros</label>
+        
+        <textarea name="mensaje" placeholder="Mensaje" maxlength="300" ></textarea>
+        <label><input type="checkbox" name="terminos" required> Acepto los términos y condiciones</label>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
